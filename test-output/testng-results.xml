@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-23T15:23:02 IST" name="Default suite" finished-at="2025-02-23T15:23:27 IST" duration-ms="25122">
+    <groups>
+    </groups>
+    <test started-at="2025-02-23T15:23:02 IST" name="Default test" finished-at="2025-02-23T15:23:27 IST" duration-ms="25122">
+      <class name="WebDriverActions.ScrollHandlingTest">
+        <test-method signature="ScrollHandlingTest()[pri:0, instance:WebDriverActions.ScrollHandlingTest@402c4085]" started-at="2025-02-23T15:23:02 IST" name="ScrollHandlingTest" finished-at="2025-02-23T15:23:27 IST" duration-ms="25010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScrollHandlingTest -->
+      </class> <!-- WebDriverActions.ScrollHandlingTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
