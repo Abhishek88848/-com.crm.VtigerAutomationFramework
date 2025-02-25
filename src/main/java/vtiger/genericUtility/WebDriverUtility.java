@@ -150,7 +150,7 @@ public class WebDriverUtility
 		
 	}
 	/**
-	 * thia method is going to perform double click anywhere in wegpage
+	 * this method is going to perform double click anywhere in wegpage
 	 * @param driver
 	 */
 	public void doubleClickOn(WebDriver driver) 
@@ -211,6 +211,25 @@ public class WebDriverUtility
 		Actions act = new Actions(driver);
 		act.contextClick(element).perform();
 		
+	}
+	/**
+	 * This gneric method will perform click operation on a particular webelement
+	 * @param driver
+	 * @param element
+	 */
+	public void leftClickOn(WebDriver driver, WebElement element)
+	{
+		Actions act = new Actions(driver);
+		act.click(element).perform();
+	}
+	/**
+	 * this generic method will perform random left click operation
+	 * @param driver
+	 */
+	public void leftClickOn(WebDriver driver)
+	{
+		Actions act = new Actions(driver);
+		act.click().perform();
 	}
 	/**
 	 * this method will perform drag from src Element and drop to target Element action
@@ -352,7 +371,7 @@ public class WebDriverUtility
 		driver.switchTo().parentFrame();
 	}
 	/**
-	 * this method will switch thw focus of automation toll from child frame to main or default or top frame
+	 * this method will switch the focus of automation toll from child frame to main or default or top frame
 	 * @param driver
 	 */
 	public void switchToMainFrame(WebDriver driver)
@@ -377,7 +396,7 @@ public class WebDriverUtility
 		return dst.getAbsolutePath();//uesed for reporting in listners.....thid method will give in which driver and in folder and in which framework all details it will return
 	}
 	/**
-	 * this methos is use to scroll based on x and y co-ordinates
+	 * this method is use to scroll based on x and y co-ordinates
 	 * @param driver
 	 */
 	public void scrollAction(WebDriver driver, int x, int y) 
