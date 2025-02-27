@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WebDriverActions.DropDownHandlingTest">
+      <class name="WebDriverActions.NestedFrameTest">
         <methods>
-          <include name="dropDownUsingMouseHoverTest"/>
+          <include name="nestedFrameTest"/>
         </methods>
-      </class> <!-- WebDriverActions.DropDownHandlingTest -->
+      </class> <!-- WebDriverActions.NestedFrameTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
