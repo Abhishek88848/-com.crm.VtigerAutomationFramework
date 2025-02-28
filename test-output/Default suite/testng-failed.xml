@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WebDriverActions.HiddenDivisionPopupTest">
+      <class name="WebDriverActions.JavascriptAlertTest">
         <methods>
-          <include name="hiddenDivisionPopupTest"/>
+          <include name="promptAlert"/>
         </methods>
-      </class> <!-- WebDriverActions.HiddenDivisionPopupTest -->
+      </class> <!-- WebDriverActions.JavascriptAlertTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
