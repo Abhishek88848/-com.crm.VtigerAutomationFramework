@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WebDriverActions.JavascriptAlertTest">
+      <class name="WebDriverActions.WindowHandlingTest">
         <methods>
-          <include name="promptAlert"/>
+          <include name="windowHandlingTest"/>
         </methods>
-      </class> <!-- WebDriverActions.JavascriptAlertTest -->
+      </class> <!-- WebDriverActions.WindowHandlingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
