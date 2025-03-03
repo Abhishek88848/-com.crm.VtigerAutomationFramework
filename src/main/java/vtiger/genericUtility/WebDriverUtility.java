@@ -1,5 +1,6 @@
 package vtiger.genericUtility;
 import java.io.IOException;
+import java.io.File;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
@@ -11,7 +12,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v128.filesystem.model.File;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -388,12 +388,12 @@ public class WebDriverUtility
 	public String takeScreenShot(WebDriver driver,String screenShotName) throws IOException
 	{
 		TakesScreenshot ts = (TakesScreenshot) driver;
-		java.io.File src = ts.getScreenshotAs(OutputType.FILE);
+		File src = ts.getScreenshotAs(OutputType.FILE);
 		String path = ".\\ScreenShots\\"+screenShotName+".png";
-		java.io.File dst = new java.io.File(path);
+		File dst = new File(path);
 		FileUtils.copyFile(src, dst);
 		//Files.copy(src, dst); both are crt but for above FileUtils.copyFile(); we need to add commons io dependency from mvn repository
-		return dst.getAbsolutePath();//uesed for reporting in listners.....thid method will give in which driver and in folder and in which framework all details it will return
+		return dst.getAbsolutePath();//uesed for reporting in listners.....this method will give in which driver and in folder and in which framework all details it will return
 	}
 	/**
 	 * this method is use to scroll based on x and y co-ordinates
