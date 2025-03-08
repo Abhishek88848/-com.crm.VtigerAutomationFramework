@@ -71,6 +71,12 @@ public class CreateConWithOrgAssertionTest extends BaseClass
 		 
 		 Reporter.log("Create Contact with organization successfull ", true);
 	}
+	
+	@Test(groups = "RegressionSuite")
+	public void testForRegressionSuiteTest()
+	{
+		System.out.println("this is a sample for regression suite Job execution");
+	}
 
 }
 

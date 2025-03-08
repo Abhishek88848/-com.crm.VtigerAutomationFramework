@@ -1,5 +1,6 @@
 package vtiger.genericUtility;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.io.File;
 import java.time.Duration;
 import java.util.Iterator;
@@ -392,7 +393,7 @@ public class WebDriverUtility
 		String path = ".\\ScreenShots\\"+screenShotName+".png";
 		File dst = new File(path);
 		FileUtils.copyFile(src, dst);
-		//Files.copy(src, dst); both are crt but for above FileUtils.copyFile(); we need to add commons io dependency from mvn repository
+		//Files.copy(src, dst);//both are crt but for above FileUtils.copyFile(); we need to add commons io dependency from mvn repository
 		return dst.getAbsolutePath();//uesed for reporting in listners.....this method will give in which driver and in folder and in which framework all details it will return
 	}
 	/**
