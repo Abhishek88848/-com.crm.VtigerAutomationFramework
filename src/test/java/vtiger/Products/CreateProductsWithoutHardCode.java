@@ -91,6 +91,7 @@ public class CreateProductsWithoutHardCode
 		driver.findElement(By.xpath("//img[@title='Create Product...']")).click();
 		driver.findElement(By.xpath("//input[@name='productname']")).sendKeys(productName+RANDOM);
 		driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
+		driver.close();
 		
 		
 		

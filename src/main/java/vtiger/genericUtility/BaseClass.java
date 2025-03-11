@@ -40,7 +40,7 @@ public class BaseClass
 	@BeforeSuite(groups = {"SmokeSuite","RegressionSuite"})
 	public void bsConfig() throws SQLException
 	{
-		dUtil.connectToDB();
+		//dUtil.connectToDB(); because i don't have sql server
 		Reporter.log("DataBase connected successfully", true);
 		
 	}
@@ -108,7 +108,7 @@ public class BaseClass
 	@AfterSuite(groups = {"SmokeSuite","RegressionSuite"})
 	public void asConfig() throws SQLException
 	{
-		dUtil.closeDB();
+	//	dUtil.closeDB();
 		Reporter.log("closed DataBase successfully", true);
 	}
 	
