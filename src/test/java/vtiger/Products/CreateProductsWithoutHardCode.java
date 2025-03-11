@@ -15,6 +15,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -24,7 +25,8 @@ import org.openqa.selenium.By;
 public class CreateProductsWithoutHardCode 
 {
 
-	public static void main(String[] args) throws IOException 
+	@Test
+	public void testProductCreation() throws IOException
 	{
 		Random r = new Random();
 		int RANDOM = r.nextInt(10000);
