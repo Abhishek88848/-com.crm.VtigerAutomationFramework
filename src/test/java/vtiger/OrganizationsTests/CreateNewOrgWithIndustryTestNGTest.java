@@ -65,7 +65,7 @@ public class CreateNewOrgWithIndustryTestNGTest
 		//login to application
 		driver.get(URL);
 		LoginPage lp = new LoginPage(driver);
-		lp.getLoginToApp(USERNAME, PASSWORD);
+		lp.loginToApp(USERNAME, PASSWORD);
 		
 		
 		//navigate to organization link

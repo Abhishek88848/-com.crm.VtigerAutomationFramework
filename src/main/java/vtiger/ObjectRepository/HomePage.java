@@ -10,7 +10,7 @@ import vtiger.genericUtility.WebDriverUtility;
 
 public class HomePage extends WebDriverUtility//create a separate class for every webpage
 {
-    //identify webelements using @FindBy, @FindAll, @FindBys and store it
+    //locate and store the webelements using @FindBy, @FindAll, @FindBys and declare them as private
 	//Declaration
 	  @FindBy(linkText = "Leads")
 	  private WebElement leadsLnk;

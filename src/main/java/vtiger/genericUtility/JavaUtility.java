@@ -18,8 +18,8 @@ public class JavaUtility
 	public int getRandomNumber()
 	{
 		Random r = new Random();
-		int jLib = r.nextInt(1000);
-		return jLib;
+		int NUM = r.nextInt(1000);
+		return NUM;
 	}
 	/**
 	 * this method will generate system date and time and return the value

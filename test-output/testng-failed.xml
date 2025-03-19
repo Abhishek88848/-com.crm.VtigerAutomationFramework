@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WebDriverActions.WindowHandlingTest">
+      <class name="vtiger.Vendors.CreateVendorTest">
         <methods>
-          <include name="windowHandlingTest"/>
+          <include name="createVendorWithGenericUtilsTest"/>
         </methods>
-      </class> <!-- WebDriverActions.WindowHandlingTest -->
+      </class> <!-- vtiger.Vendors.CreateVendorTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -74,7 +74,7 @@ public class CreateContactWithOrganizationPOMTest
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		 driver.get(URL);
 		 LoginPage lp = new LoginPage(driver);
-		 lp.getLoginToApp(USERNAME, PASSWORD);
+		 lp.loginToApp(USERNAME, PASSWORD);
 		 
 		//navigate to organization link
 		 HomePage hp = new HomePage(driver);

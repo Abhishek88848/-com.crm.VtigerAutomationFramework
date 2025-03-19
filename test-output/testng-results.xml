@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-02T20:17:44 IST" name="Default suite" finished-at="2025-03-02T20:17:44 IST" duration-ms="109">
+  <suite started-at="2025-03-19T19:21:12 IST" name="Default suite" finished-at="2025-03-19T19:21:33 IST" duration-ms="21426">
     <groups>
     </groups>
-    <test started-at="2025-03-02T20:17:44 IST" name="Default test" finished-at="2025-03-02T20:17:44 IST" duration-ms="109">
-      <class name="WebDriverActions.FileHandlingTest">
-        <test-method signature="fileHandlingTest()[pri:0, instance:WebDriverActions.FileHandlingTest@1a75e76a]" started-at="2025-03-02T20:17:44 IST" name="fileHandlingTest" finished-at="2025-03-02T20:17:44 IST" duration-ms="15" status="PASS">
+    <test started-at="2025-03-19T19:21:12 IST" name="Default test" finished-at="2025-03-19T19:21:33 IST" duration-ms="21426">
+      <class name="vtiger.Vendors.CreateVendorTest">
+        <test-method signature="createVendorWithGenericUtilsTest()[pri:0, instance:vtiger.Vendors.CreateVendorTest@5b247367]" started-at="2025-03-19T19:21:12 IST" name="createVendorWithGenericUtilsTest" finished-at="2025-03-19T19:21:33 IST" duration-ms="21327" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fileHandlingTest -->
-      </class> <!-- WebDriverActions.FileHandlingTest -->
+        </test-method> <!-- createVendorWithGenericUtilsTest -->
+      </class> <!-- vtiger.Vendors.CreateVendorTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
