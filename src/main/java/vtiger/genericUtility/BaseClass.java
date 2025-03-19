@@ -84,7 +84,7 @@ public class BaseClass
 		String PASSWORD = pUtil.readDataFromPropertyFile("password");
 		
 		LoginPage lp = new LoginPage(driver);
-		lp.getLoginToApp(USERNAME, PASSWORD);
+		lp.loginToApp(USERNAME, PASSWORD);
 		Reporter.log("Logged into application successfully", true);
 	}
 	

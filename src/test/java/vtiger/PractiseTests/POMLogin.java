@@ -32,7 +32,7 @@ public class POMLogin
 		login.click();
 		*/
 		LoginPage lp = new LoginPage(driver);
-		lp.getLoginToApp("admin", "admin");
+		lp.loginToApp("admin", "admin");
 		
 		
 

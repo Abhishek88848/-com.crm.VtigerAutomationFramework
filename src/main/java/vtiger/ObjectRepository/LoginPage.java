@@ -5,54 +5,64 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage //create a separate class for every webpage
+public class LoginPage //step1: create a separate class for every webpage
 {
-	//rule2: identify the webelement by using @FindBy, @FindAll, @FindBys to store elements
+	//step2: locate and store the web elements using @FindBy, @FindBys, @FindAll and declare them as private
 	//Declaration
 	@FindBy(name = "user_name")
-	private WebElement userNameEdt;
+    private WebElement userNameEdt;
 	
-	@FindBy(name = "user_password")
+	@FindBy(xpath = "//input[@type='password']")
 	private WebElement passwordEdt;
 	
 	@FindBy(id = "submitButton")
 	private WebElement loginBtn;
+
 	
-	//rule3: create a constructor to initialize the webelements
+	//Step3: create a constructor to initialize the web elements
 	//initialization
-	public LoginPage(WebDriver driver)
+	public LoginPage(WebDriver driver) 
 	{
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);	
 	}
+
 	
-	//rule4: provide getter method to access webelement in test script
+	//Step4: provide getters method to access these private web elements in Test Scripts
+	// without writing getters methods manually if we want automatically then right click on workspace and navigate to Source and select
+	// Generate getters and setters then it will show options like setters method and getters methods so select getters because we  want 
+	// Getters methods
 	public WebElement getUserNameEdt()
 	{
 		return userNameEdt;
 	}
-	
+
+
 	public WebElement getPasswordEdt()
 	{
 		return passwordEdt;
 	}
-	
-	public WebElement getLoginBtn()
+
+
+	public WebElement getSubmitBtn()
 	{
 		return loginBtn;
 	}
 	
-	//rule5: business library
+	//Step5: Business Library
 	/**
-	 * this method will perform login to the application
-	 * @author ABHISHEK KELUSKER
-	 * @param userName
+	 * This method will perform login to the application operation
+	 * @author Abhishek Kelusker
+	 * @param username
 	 * @param password
 	 */
-	public void getLoginToApp(String userName, String password)
+	public void loginToApp(String username, String password)
 	{
-		userNameEdt.sendKeys(userName);
+		userNameEdt.sendKeys(username);
 		passwordEdt.sendKeys(password);
 		loginBtn.click();
+	    
 	}
-
+	
+	
+	
 }

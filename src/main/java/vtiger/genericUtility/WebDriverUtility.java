@@ -1,11 +1,10 @@
 package vtiger.genericUtility;
-import java.io.IOException;
-import java.nio.file.Files;
+
 import java.io.File;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
-
+import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,14 +19,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 /**
- * this class contains all generic methods related to web driver actions 
+ * This class contains all generic methods related to web driver actions 
  * @author ABHISHEK K
  *
  */
 public class WebDriverUtility 
 {
 	/**
-	 * this method is use to maximize the the window
+	 * this method is used to maximize the window
 	 * @param driver
 	 */
 	public void maximizeWindow(WebDriver driver) 
@@ -37,7 +36,7 @@ public class WebDriverUtility
 		
 	}
 	/**
-	 * this method is use to wait for 20 seconds to load entire Dom structure
+	 * this method is used to wait for 20 seconds to load entire Dom structure
 	 * @param driver
 	 */
 	//DOM:-Document object model
@@ -57,6 +56,7 @@ public class WebDriverUtility
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
 		
+		
 	}
 	/**
 	 * this method will until the required element is located/visible
@@ -70,7 +70,7 @@ public class WebDriverUtility
 		
 	}
 	/**
-	 * this method is use to wait until element to be clickable
+	 * this method is used to wait until element to be clickable
 	 * @param driver
 	 * @param element
 	 */
@@ -91,8 +91,8 @@ public class WebDriverUtility
 		
 	}
 	/**
-	 * this method will wait for particular element to perform click operation
-	 * if the element is not interactive it will wait for 1 second
+	 * this method will wait for a particular element to perform a click operation
+	 * if the element is not interactive, it will wait for 1 second
 	 * when in implicit wait or explicit wait the given time is got completed than also webelement is not clickable
 	 * then we go for our own wait
 	 * @param element
@@ -114,8 +114,7 @@ public class WebDriverUtility
 			Thread.sleep(1000);
 			count++;
 		 }
-		
-	    }
+		}
 	}
 	/**
 	 * this method will handle drop down by select class using index
@@ -394,7 +393,7 @@ public class WebDriverUtility
 		File dst = new File(path);
 		FileUtils.copyFile(src, dst);
 		//Files.copy(src, dst);//both are crt but for above FileUtils.copyFile(); we need to add commons io dependency from mvn repository
-		return dst.getAbsolutePath();//uesed for reporting in listners.....this method will give in which driver and in folder and in which framework all details it will return
+		return dst.getAbsolutePath();//used for reporting in listeners.....this method will give in which driver and in folder and in which framework all details it will return
 	}
 	/**
 	 * this method is use to scroll based on x and y co-ordinates
@@ -415,8 +414,9 @@ public class WebDriverUtility
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		//js.executeScript("arguments[0].scrollIntoView(true);", element);
+		int x = element.getLocation().getX();
 		int y = element.getLocation().getY();
-		js.executeScript("window.scrollBy(0,"+y+")",element );
+		js.executeScript("window.scrollBy("+x+","+y+")",element );
 		//jse.executeScript("window.scrollBy(0,"+y+")");
 		
 	}
