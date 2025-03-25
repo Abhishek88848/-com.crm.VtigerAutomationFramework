@@ -43,7 +43,7 @@ public class LoginPage //step1: create a separate class for every webpage
 	}
 
 
-	public WebElement getSubmitBtn()
+	public WebElement getLoginBtn()
 	{
 		return loginBtn;
 	}

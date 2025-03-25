@@ -33,6 +33,12 @@ public class HomePage extends WebDriverUtility//create a separate class for ever
 	  @FindAll({@FindBy(xpath = "//a[text()= 'Sign Out']"), @FindBy(linkText = "Sign Out")})
 	  private WebElement signOutLnk;
 	  
+	  @FindBy(xpath = "//img[@src='themes/softed/images/menuDnArrow.gif']")
+	  private WebElement moreDrpDwn;
+	  
+	  @FindBy(linkText = "Vendors")
+	  private WebElement vendorsLnk;
+	  
 	  
 	//Create a constructor to initialize
 	//initialization
@@ -66,6 +72,16 @@ public class HomePage extends WebDriverUtility//create a separate class for ever
 	{
 		return productsLnk;
 	}
+	
+	public WebElement getMoreDrpDwn()
+	{
+		return moreDrpDwn;
+	}
+	
+	public WebElement getVendorsLnk()
+	{
+		return vendorsLnk;
+	}
 	  
 	  
 	//business libraries
@@ -77,12 +93,19 @@ public class HomePage extends WebDriverUtility//create a separate class for ever
 	{
 		leadsLnk.click();
 	}
-	
+	/**
+	 * this method will perform click operation on contacts link
+	 * @author Abhishek kelusker
+	 */
 	public void clickOnContactsLnk()
 	{
 		contactsLnk.click();
 	}
 	
+	/**
+	 * this method will perform click operation on  organization link
+	 * @author ABHISHEK K
+	 */
 	public void clickOnOrganizationLnk()
 	{
 		organizationLnk.click();
@@ -93,10 +116,21 @@ public class HomePage extends WebDriverUtility//create a separate class for ever
 	}
 	/**
 	 * this method will click on product link
+	 * @author ABHISHEK K
 	 */
 	public void clickOnProductLnk()
 	{
 		productsLnk.click();
+	}
+	/**
+	 * This method will perform click operation on Vendors link
+	 * @Abhishek kelusker
+	 * @param driver
+	 */
+	public void clickOnVendorsLnk(WebDriver driver)
+	{
+		mouseHoverOn(driver, moreDrpDwn);
+		leftClickOn(driver, vendorsLnk);
 	}
 	/**
 	 * this method will perform signout operation from the application
@@ -106,7 +140,5 @@ public class HomePage extends WebDriverUtility//create a separate class for ever
 	{
 		mouseHoverOn(driver, AdministratorImg);
 		signOutLnk.click();
-		
-		
 	}
 }

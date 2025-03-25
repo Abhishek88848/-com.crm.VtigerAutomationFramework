@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vtiger.Vendors.CreateVendorTest">
+      <class name="vtiger.Products.CreateProductsTests">
         <methods>
-          <include name="createVendorWithGenericUtilsTest"/>
+          <include name="createProductsWithVendorsWithGenericUtilitiesTest"/>
         </methods>
-      </class> <!-- vtiger.Vendors.CreateVendorTest -->
+      </class> <!-- vtiger.Products.CreateProductsTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
