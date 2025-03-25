@@ -18,7 +18,11 @@ import vtiger.ObjectRepository.HomePage;
 import vtiger.ObjectRepository.LoginPage;
 import vtiger.ObjectRepository.OrganizationInformationPage;
 import vtiger.ObjectRepository.OrganizationsPage;
-
+/**
+ * @author Abhishek
+ * @author ADMIN
+ *
+ */
 public class CreateNewOrganizationPom
 {
 
@@ -50,7 +54,7 @@ public class CreateNewOrganizationPom
 		{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			System.out.println("chrome browser launched successfully");
+			System.out.println("Hi Welcome to Chrome Browser Bidar");
 			
 		}
 		else if(BROWSER.equalsIgnoreCase("firefox"))
@@ -66,7 +70,7 @@ public class CreateNewOrganizationPom
 		
 		//login to application
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		driver.get(URL);
 		LoginPage lp = new LoginPage(driver);
 		lp.loginToApp(USERNAME,PASSWORD);

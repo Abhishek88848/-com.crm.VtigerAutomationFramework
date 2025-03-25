@@ -17,6 +17,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import vtiger.ObjectRepository.VendorsPage;
+import vtiger.ObjectRepository.CreateNewVendorPage;
+import vtiger.ObjectRepository.HomePage;
+import vtiger.ObjectRepository.LoginPage;
 import vtiger.genericUtility.ExcelFileUtility;
 import vtiger.genericUtility.JavaUtility;
 import vtiger.genericUtility.PropertyFileUtility;
@@ -199,7 +203,6 @@ public class CreateVendorTest
 		wUtil.maximizeWindow(driver);
 		wUtil.waitForElementsToLoadInDom(driver);
 		driver.get(URL);
-		/*
 		driver.findElement(By.name("user_name")).sendKeys(USERNAME);
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(PASSWORD);
 		WebElement clickButton = driver.findElement(By.id("submitButton"));
@@ -230,10 +233,68 @@ public class CreateVendorTest
 		Thread.sleep(3000);
 		driver.quit();
 		
-		*/
+	}
+	
+	@Test
+	public void createVendorWithPOM() throws EncryptedDocumentException, IOException
+	{
+		WebDriver driver = null;
+		//step1: create objects of Generic utilities
+		WebDriverUtility wUtil = new WebDriverUtility();
+		JavaUtility jUtil = new JavaUtility();
+		ExcelFileUtility eUtil = new ExcelFileUtility();
+		PropertyFileUtility pUtil = new PropertyFileUtility();
+		
+		//step2: read the required data into testscript
+		String VENDORSNAME = eUtil.readDataFromExcelSheet("Vendors", 1, 2);
+		
+		String BROWSER = pUtil.readDataFromPropertyFile("browser");
+		String URL = pUtil.readDataFromPropertyFile("url");
+		String USERNAME = pUtil.readDataFromPropertyFile("username");
+		String PASSWORD = pUtil.readDataFromPropertyFile("password");
+		
+		
+		//step3: launch the browser
+		if(BROWSER.equalsIgnoreCase("chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			System.out.println("chrome browser launched successfully");
+			
+		}
+		else if(BROWSER.equalsIgnoreCase("firefox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+			System.out.println("firefox browser launched succesfully");
+			
+		}
+		else
+		{
+			System.out.println("non of the browser launched ");
+		}
+		
+		wUtil.maximizeWindow(driver);
+		wUtil.waitForElementsToLoadInDom(driver);
+		driver.get(URL);
+		
+		LoginPage lp = new LoginPage(driver);
+		lp.loginToApp(USERNAME, PASSWORD);
+		
+		HomePage hp = new HomePage(driver);
+		hp.clickOnVendorsLnk(driver);
+		
+		
+		VendorsPage vp = new VendorsPage(driver);
+		vp.clickOnCreateVendorLookUpImg(driver);
+		
+		CreateNewVendorPage cnvp = new CreateNewVendorPage(driver);
+		cnvp.createNewVendors(VENDORSNAME, driver);
 		
 		
 		
+			
+			
 		
 	}
 
